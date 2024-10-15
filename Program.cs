@@ -10,6 +10,7 @@
             Azucarera azucar = new Azucarera(randomData.randomAzucar());
             Cafetera Cafe = new Cafetera(randomData.randomCafe());
 
+
             Console.WriteLine("Este programa sirve para simular una cafetera");
 
             bool bucle = false;
@@ -17,29 +18,17 @@
             while (bucle != true)
             {
                 Informacion.ElegirVaso();
-                int opcion = Convert.ToInt32(Console.ReadLine());   
+                int opcion = Convert.ToInt32(Console.ReadLine());
+                vasos.EleccionVaso(opcion);
 
-                switch (opcion)
+                Cafe.ServirCafe(vasos,opcion);
+
+                Console.WriteLine("presione si o no insumo");
+                int op = Convert.ToInt32(Console.ReadLine());
+                if (op == 1)
                 {
-                       
-                    case 1:
-                        Console.WriteLine("paso 1");
-                        break;
-
-                    case 2:
-                        Console.WriteLine("paso 2");
-                        break;
-
-                    case 3:
-                        Console.WriteLine("paso 3");
-                        break;
-
-                    case 4:
-                        Console.WriteLine("paso 4");
-                        break;
-
-                }
-
+                    Informacion.MostrarInsumos(vasos, azucar, Cafe);
+                        }
 
 
             }

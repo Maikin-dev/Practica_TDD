@@ -9,18 +9,32 @@ namespace PRUEBA
     public class Trabajador
     {
 
-        public void rellenarCafetera()
+        public static void rellenarCafetera(Cafetera cafe, int cantidad)
         {
-            Console.WriteLine("Se relleno la cafetera ya tiene 2L (2000ml)");
+            cafe.CantidadCafe += cantidad;
+            Console.WriteLine("La cafetera se ha rellenado a 2L (2000ml)");
         }
 
-        public static void rellenarVasos()
+        public static void rellenarVasos(Vasos vasos, int cantidad, int tipo)
         {
-            Console.WriteLine("Se rellenaron los portavasos a 10");
-            
+            if(tipo == 1)
+            {
+                vasos.VasosSmall += cantidad;
+                Console.WriteLine("Se rellenaron los portavasos a 10");
+            }
+            else if(tipo == 2)
+            {
+                vasos.VasosMedium += cantidad;
+                Console.WriteLine("Se rellenaron los portavasos a 10");
+            }
+            else if (tipo == 3)
+            {
+                vasos.VasosLarge += cantidad;
+                Console.WriteLine("Se rellenaron los portavasos a 10");
+            }
         }
 
-        public void rellenarAzucarera()
+        public static void rellenarAzucarera()
         {
             Console.WriteLine("Se relleno la azucarera ya tiene 20 cucharadas mas de azucar");
 

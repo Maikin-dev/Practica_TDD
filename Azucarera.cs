@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PRUEBA
 {
-    internal class Azucarera
+    public class Azucarera
     {
         private int cantidad_azucar;
 
@@ -20,7 +20,7 @@ namespace PRUEBA
 
         public override string ToString()
         {
-            return $"Esta es la cantidad de azucar que hay: {CantidadAzucar} cucharadas";
+            return $"Esta es la cantidad de azucar que hay: {CantidadAzucar} cucharadas de azucar";
         }
 
     }

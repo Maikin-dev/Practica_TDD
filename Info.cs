@@ -31,5 +31,18 @@ namespace PRUEBA
             Console.WriteLine("5.No quiero azucar");
         }
         
+        public void CantidadCafe()
+        {
+
+        }
+
+        public void MostrarInsumos(Vasos vasos, Azucarera azucarera, Cafetera cafetera)
+        {
+            Console.WriteLine("Estos son los insumo: ");
+            Console.WriteLine(vasos);
+            Console.WriteLine(azucarera);
+            Console.WriteLine(cafetera);
+        }
+
     }
 }

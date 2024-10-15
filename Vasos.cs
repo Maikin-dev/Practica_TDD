@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace PRUEBA
 {
-    internal class Vasos
+    public class Vasos
     {
-        
-
         private int vasos_small;
         private int vasos_medium;
         private int vasos_large;
@@ -30,30 +28,31 @@ namespace PRUEBA
             VasosLarge = vasosLarge;
         }
 
-        public void EleccionVaso()
+        public void EleccionVaso(int opcion)
         {
-            int eleccion = Convert.ToInt32(Console.ReadLine());
-            switch (eleccion)
+            switch (opcion)
             {
                 case 1:
-
-                    VerificacionVasos(eleccion);
+                    VerificacionVasos(opcion);
                     VasosSmall -= 1;
                     Console.WriteLine("Haz tomado un vaso small");
                     break;
 
                 case 2:
+                    VerificacionVasos(opcion);
                     VasosMedium -= 1;
                     Console.WriteLine("Haz tomado un vaso medium");
                     break;
 
                 case 3:
+                    VerificacionVasos(opcion);
                     VasosLarge -= 1;
                     Console.WriteLine("Haz tomado un vaso large");
                     break;
 
-                case 4: 
-                    Console.WriteLine();
+                case 4:
+                    Console.WriteLine("Vuelva Pronto");
+                    Environment.Exit(0);
                     break;
             }
         }
@@ -63,41 +62,60 @@ namespace PRUEBA
             switch(TipoVaso)
             {
                 case 1:
-                    if (VasosSmall == 0)
+                    if (VasosSmall < 1)
                     {
                         Console.WriteLine("No hay vasos deseas llamar a un reponedor o prefieres irte?");
                         Console.WriteLine("Presione:\n1.Llamar Reponedor \n2.Irme \n");
                         int opcion = Convert.ToInt32(Console.ReadLine());
                         if (opcion == 1)
                         {
-                            Console.WriteLine("Llamando a reponedor:\n .\n..\n...\n....\n.....\n");
-                            Trabajador.rellenarVasos();
+                            Console.WriteLine("Llamando a reponedor:\n.\n..\n...\n....\n.....\n");
+                            Trabajador.rellenarVasos(this, 10, TipoVaso);
+                        }else if (opcion == 2)
+                        {
+                            Console.WriteLine("Vuelva Pronto");
+                            Environment.Exit(0);
                         }
                     }
                     break;
 
                 case 2:
-                    if (VasosSmall == 0)
+                    if (VasosMedium < 1)
                     {
-                        Trabajador.rellenarVasos();
-                    }
-                    else
-                    {
-
+                        Console.WriteLine("No hay vasos deseas llamar a un reponedor o prefieres irte?");
+                        Console.WriteLine("Presione:\n1.Llamar Reponedor \n2.Irme \n");
+                        int opcion = Convert.ToInt32(Console.ReadLine());
+                        if (opcion == 1)
+                        {
+                            Console.WriteLine("Llamando a reponedor:\n.\n..\n...\n....\n.....\n");
+                            Trabajador.rellenarVasos(this, 10, TipoVaso);
+                        }
+                        else if (opcion == 2)
+                        {
+                            Console.WriteLine("Vuelva Pronto");
+                            Environment.Exit(0);
+                        }
                     }
                     break;
 
                 case 3:
-                    if (VasosSmall == 0)
+                    if (VasosLarge < 1)
                     {
-                        Trabajador.rellenarVasos();
-                    }
-                    else
-                    {
-
+                        Console.WriteLine("No hay vasos deseas llamar a un reponedor o prefieres irte?");
+                        Console.WriteLine("Presione:\n1.Llamar Reponedor \n2.Irme \n");
+                        int opcion = Convert.ToInt32(Console.ReadLine());
+                        if (opcion == 1)
+                        {
+                            Console.WriteLine("Llamando a reponedor:\n.\n..\n...\n....\n.....\n");
+                            Trabajador.rellenarVasos(this, 10, TipoVaso);
+                        }
+                        else if (opcion == 2)
+                        {
+                            Console.WriteLine("Vuelva Pronto");
+                            Environment.Exit(0);
+                        }
                     }
                     break;
-
             }
         }
 
