@@ -35,19 +35,19 @@ namespace PRUEBA
                 case 1:
                     VerificacionVasos(opcion);
                     VasosSmall -= 1;
-                    Console.WriteLine("Haz tomado un vaso small");
+                    Console.WriteLine("Haz tomado un vaso small ");
                     break;
 
                 case 2:
                     VerificacionVasos(opcion);
                     VasosMedium -= 1;
-                    Console.WriteLine("Haz tomado un vaso medium");
+                    Console.WriteLine("Haz tomado un vaso medium ");
                     break;
 
                 case 3:
                     VerificacionVasos(opcion);
                     VasosLarge -= 1;
-                    Console.WriteLine("Haz tomado un vaso large");
+                    Console.WriteLine("Haz tomado un vaso large ");
                     break;
 
                 case 4:
@@ -121,7 +121,7 @@ namespace PRUEBA
 
         public override string ToString()
         {
-            return $"Esta es la cantidad de vasos que hay de vasos:\n vasos pequeños:{VasosSmall} \n vasos medianos: {VasosMedium} \n vasos grandes:{VasosLarge}";
+            return $"Esta es la cantidad de vasos que hay de vasos:\n Vasos pequeños:{VasosSmall} \n Vasos medianos: {VasosMedium} \n Vasos grandes:{VasosLarge}";
         }
       
 

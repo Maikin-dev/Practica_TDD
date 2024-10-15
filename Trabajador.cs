@@ -34,10 +34,10 @@ namespace PRUEBA
             }
         }
 
-        public static void rellenarAzucarera()
+        public static void rellenarAzucarera(Azucarera azucar, int cantidad)
         {
+            azucar.CantidadAzucar += cantidad;
             Console.WriteLine("Se relleno la azucarera ya tiene 20 cucharadas mas de azucar");
-
         }
     }
 }

@@ -17,20 +17,23 @@
 
             while (bucle != true)
             {
+                Informacion.MostrarInsumos(vasos, azucar,Cafe);
+
                 Informacion.ElegirVaso();
+
                 int opcion = Convert.ToInt32(Console.ReadLine());
+
                 vasos.EleccionVaso(opcion);
 
                 Cafe.ServirCafe(vasos,opcion);
 
-                Console.WriteLine("presione si o no insumo");
-                int op = Convert.ToInt32(Console.ReadLine());
-                if (op == 1)
-                {
-                    Informacion.MostrarInsumos(vasos, azucar, Cafe);
-                        }
+                Informacion.CantidadAzucar();
 
+                int elegir = Convert.ToInt32(Console.ReadLine());
 
+                azucar.ServirAzucar(elegir);
+
+                bucle = Informacion.OtroCafe();
             }
         }
     }

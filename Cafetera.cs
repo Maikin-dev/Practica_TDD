@@ -26,17 +26,17 @@ namespace PRUEBA
                 if (opcion == 1)
                 {
                     cantidad_cafe -= 80;
-                Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar");
+                Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar\n");
                 }
                 else if (opcion == 2)
                 {
                     cantidad_cafe -= 140;
-                    Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar");
+                    Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar\n");
                 }
                 else if (opcion == 3)
                 {          
                     cantidad_cafe -= 190;
-                    Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar");
+                    Console.WriteLine("Su vaso se ha llenado, quiere añadir azucar\n");
                 }
   
         }
@@ -45,15 +45,15 @@ namespace PRUEBA
         {
             if (opcion == 3 && cantidad_cafe > vaso.capacidad_large - 11)
             {
-                Console.WriteLine("Espere un momento...");
+                Console.WriteLine("Espere un momento...\n");
             }
             else if (opcion == 2 && cantidad_cafe > vaso.capacidad_medium - 11)
             {
-                Console.WriteLine("Espere un momento...");
+                Console.WriteLine("Espere un momento...\n");
             } 
             else if(opcion == 1 && cantidad_cafe > vaso.capacidad_small - 11)
             {
-                Console.WriteLine("Espere un momento...");
+                Console.WriteLine("Espere un momento...\n");
             }
             else
             {
@@ -76,7 +76,7 @@ namespace PRUEBA
 
         public override string ToString()
         {
-            return $"Esta es la cantidad de cafe que hay: {CantidadCafe}ml";
+            return $"Esta es la cantidad de cafe que hay: \n {CantidadCafe}ml";
         }
     }
 }

@@ -12,12 +12,12 @@ namespace PRUEBA
 
         public void ElegirVaso()
         {
-            Console.WriteLine(" !!! Vamos a tomar un café !!!");
+            Console.WriteLine(" \n!!! Vamos a tomar un café !!!\n");
             Console.WriteLine("Elige un vaso: ");
             Console.WriteLine("1.Vaso de 90ml");
             Console.WriteLine("2.Vaso de 150ml");
-            Console.WriteLine("3.Vaso de 20ml");
-            Console.WriteLine("4.Me arrepiento no quiero beber café");
+            Console.WriteLine("3.Vaso de 200ml");
+            Console.WriteLine("4.Me arrepiento no quiero beber café\n");
         }
 
 
@@ -27,21 +27,37 @@ namespace PRUEBA
             Console.WriteLine("1.Una cucharada");
             Console.WriteLine("2.Dos cucharada");
             Console.WriteLine("3.Tres cucharada");
-            Console.WriteLine("4.Otra cantidad de cucharadas");
-            Console.WriteLine("5.No quiero azucar");
+            Console.WriteLine("4.No quiero azucar");
         }
         
-        public void CantidadCafe()
-        {
-
-        }
 
         public void MostrarInsumos(Vasos vasos, Azucarera azucarera, Cafetera cafetera)
         {
-            Console.WriteLine("Estos son los insumo: ");
-            Console.WriteLine(vasos);
-            Console.WriteLine(azucarera);
-            Console.WriteLine(cafetera);
+            Console.WriteLine("Quieres ver los insumos de la maquina?\nPresione:\n1.Si\n2.No\n");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+            if (opcion == 1)
+            {
+                Console.WriteLine("Estos son los insumo: ");
+                Console.WriteLine(vasos);
+                Console.WriteLine(azucarera);
+                Console.WriteLine(cafetera);
+            }
+        }
+
+        public bool OtroCafe()
+        {
+            Console.WriteLine("Quiere otro Cafe?\nPresione:\n1.Si\n2.No");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+            if(opcion == 1 )
+            {
+                Console.WriteLine("Hasta Pronto.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
     }
